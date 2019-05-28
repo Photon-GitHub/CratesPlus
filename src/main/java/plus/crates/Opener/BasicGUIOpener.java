@@ -172,7 +172,7 @@ public class BasicGUIOpener extends Opener implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getInventory().getTitle() != null && event.getInventory().getTitle().contains(" Win") && !event.getInventory().getTitle().contains("Edit ")) {
+        if (event.getView().getTitle() != null && event.getView().getTitle().contains(" Win") && !event.getView().getTitle().contains("Edit ")) {
             if (event.getInventory().getType() != null && event.getInventory().getType() == InventoryType.CHEST && event.getSlot() != 22 || (event.getCurrentItem() != null)) {
                 event.setCancelled(true);
                 event.getWhoClicked().closeInventory();
